@@ -53,3 +53,32 @@ Here is a pre-start checklist:
 ## Implementation
 
 ** ADD YOUR IMPLEMENTATION DOCUMENTATION HERE **
+**Testing Instructions for HiveBox App - Phase2 **
+To test the HiveBox application, you will need Docker installed on your system. Follow these steps to build the Docker image and run the application locally.
+
+** Prerequisites **
+Docker: Ensure Docker Desktop (for Windows/macOS) or Docker Engine (for Linux) is installed and running on your machine. You can download it from docker.com.
+
+** Navigate to the Project Directory: **
+Open your terminal or command prompt and navigate to the root directory of your HiveBox project. This directory should contain both the print_app_version_finction.py file and the Dockerfile.
+
+cd /path/to/your/hivebox/project
+
+Build the Docker Image:
+Use the docker build command to create the Docker image. 
+
+docker build -t hivebox-app:v0.0.1 .
+
+You should see output indicating the build process, ending with a message like Successfully built <image_id> and Successfully tagged hivebox-app:v0.0.1.
+
+** Run the Docker Container and Verify Output: **
+
+Once the image is built, you can run a container from it. The ENTRYPOINT instruction in the Dockerfile ensures that print_app_version_finction.py is executed when the container starts.
+
+docker run hivebox-app:v0.0.1
+
+Upon running, you should see the following output in your terminal:
+
+The applications version is: v0.0.1
+
+This output confirms that the application inside the Docker container executed successfully and printed the correct version. The container will then exit automatically.
