@@ -82,3 +82,4 @@ Upon running, you should see the following output in your terminal:
 The applications version is: v0.0.1
 
 This output confirms that the application inside the Docker container executed successfully and printed the correct version. The container will then exit automatically.
+ok.
